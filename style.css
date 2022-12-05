@@ -1,0 +1,199 @@
+*{
+    margin: 0 auto;
+    padding: 0 auto;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: rgb(7,8,127);
+background: linear-gradient(58deg, rgba(7,8,127,0.9392799356070554) 10%, rgba(38,39,130,0.863649683506215) 50%, rgba(25,28,159,1) 99%, rgba(255,255,255,1) 100%);
+    
+}
+section{
+    background-color: white;
+    background: rgb(7,8,127);
+    background: linear-gradient(58deg, rgba(7,8,127,0.9392799356070554) 10%, rgba(38,39,130,0.863649683506215) 50%, rgba(25,28,159,1) 99%, rgba(255,255,255,1) 100%);
+    width: 400px;
+    max-width: 100%;
+    height: 500px;
+    color: white;
+    border-radius: 10px;
+    padding: 20px 20px 0px 20px;
+    position: relative;
+}
+.score{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.score h2{
+    font-size: 20px;
+}
+.score p{
+    text-align: center;
+    padding: 5px;
+    background-color: red;
+    background: rgb(7,8,127);
+    background: linear-gradient(58deg, rgba(7,8,127,0.9392799356070554) 10%, rgba(38,39,130,0.863649683506215) 50%, rgba(25,28,159,1) 99%, rgba(255,255,255,1) 100%);
+
+    color: white;
+    width: 40px;
+    margin: 10px auto;
+    font-size: 30px;
+    font-weight: 600;
+    border-radius: 50px;
+}
+.intro{
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: opacity .5s ease;
+ 
+
+}
+.intro h1{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 14rem;
+}
+.intro button{
+    width: 30%;
+    height: 50px;
+    position: absolute;
+    bottom: 10%;
+    font-size: 15px;
+    background: rgb(7,8,127);
+    background: linear-gradient(58deg, rgba(7,8,127,0.9392799356070554) 10%, rgba(38,39,130,0.863649683506215) 50%, rgba(25,28,159,1) 99%, rgba(255,255,255,1) 100%);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+    color: white;
+    border: 1px solid white;
+}
+.intro button:hover{
+    background-color: white;
+
+}
+.match{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity .5s ease;
+ 
+}
+.hands img{
+    width: 90px;
+    margin: 20% 0 10px 0;
+    padding: 20px;
+    border: 7px solid white;
+    border-radius: 100%;
+    filter: brightness(0) invert(1);
+
+}
+.winner{
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.hands, .options{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.options button{
+    width: 110px;
+    height: 50px;
+    font-size: 15px;
+    background: rgb(7,8,127);
+    background: linear-gradient(58deg, rgba(7,8,127,0.9392799356070554) 10%, rgba(38,39,130,0.863649683506215) 50%, rgba(25,28,159,1) 99%, rgba(255,255,255,1) 100%);
+    margin: 5px;
+    color: white;
+    cursor: pointer;
+    border-radius:10px;
+    transition: .4s ease;
+    margin-top: 30px;
+    border: 1px solid white;
+
+}
+.options button:hover{
+    background-color: white;
+}
+.player_hand{
+    transform: rotate(90deg);
+}
+.computer_hand{
+    transform: rotate(270deg);
+}
+
+div.unactive{
+    opacity: 0;
+    pointer-events: none;
+}
+div.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@keyframes shakePlayer{
+    0%{
+        transform:rotate(90deg) translateX(0px);
+    }
+    20%{
+        transform:rotate(90deg) translateX(-30px);
+    }
+    40%{
+        transform:rotate(90deg) translateX(0px);
+    }
+    50%{
+        transform:rotate(90deg) translateX(-30px);
+    }
+    70%{
+        transform:rotate(90deg) translateX(0px);
+    }
+    90%{
+        transform:rotate(90deg) translateX(-30px);
+    }
+    100%{
+        transform:rotate(90deg) translateX(0px);
+    }
+}
+    
+@keyframes shakeComputer{
+    0%{
+        transform:rotate(270deg) translateX(0px);
+    }
+    20%{
+        transform:rotate(270deg) translateX(30px);
+    }
+    40%{
+        transform:rotate(270deg) translateX(0px);
+    }
+    50%{
+        transform:rotate(270deg) translateX(30px);
+    }
+    70%{
+        transform:rotate(270deg) translateX(0px);
+    }
+    90%{
+        transform:rotate(270deg) translateX(30px);
+    }
+    100%{
+        transform:rotate(270deg) translateX(0px);
+    }
+}
+   
